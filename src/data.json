@@ -1,0 +1,226 @@
+[
+  {
+    "subjectname": "Matemáticas",
+    "area": [
+      {
+        "name": "Administración"
+      },
+      {
+        "name": "Tics"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Pedro Perez"
+      },
+      {
+        "name": "Ana Lopez"
+      }
+    ],
+    "durationHours": 100
+  },
+  {
+    "subjectname": "Programación",
+    "area": [
+      {
+        "name": "Tics"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Juan Solo"
+      },
+      {
+        "name": "Luis Ku"
+      }
+    ],
+    "durationHours": 200
+  },
+  {
+    "subjectname": "Base de datos",
+    "area": [
+      {
+        "name": "Tics"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Carlos Perez"
+      },
+      {
+        "name": "María Soberanis"
+      }
+    ],
+    "durationHours": 150
+  },
+  {
+    "subjectname": "Redes",
+    "area": [
+      {
+        "name": "Tics"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Pedro Perez"
+      },
+      {
+        "name": "Ana Lopez"
+      }
+    ],
+    "durationHours": 100
+  },
+  {
+    "subjectname": "Sistemas operativos",
+    "area": [
+      {
+        "name": "Tics"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Juan Solo"
+      },
+      {
+        "name": "Luis Ku"
+      }
+    ],
+    "durationHours": 200
+  },
+  {
+    "subjectname": "Seguridad informática",
+    "area": [
+      {
+        "name": "Tics"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Carlos Ake"
+      },
+      {
+        "name": "María Mendez"
+      }
+    ],
+    "durationHours": 150
+  },
+  {
+    "subjectname": "Contabilidad",
+    "area": [
+      {
+        "name": "Administración"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Pedro Perez"
+      },
+      {
+        "name": "Ana Sulub"
+      }
+    ],
+    "durationHours": 100
+  },
+  {
+    "subjectname": "Finanzas",
+    "area": [
+      {
+        "name": "Administración"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Juan Cruz"
+      }
+    ],
+    "durationHours": 200
+  },
+  {
+    "subjectname": "Recursos humanos",
+    "area": [
+      {
+        "name": "Administración"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Carlos Ake"
+      },
+      {
+        "name": "María Mendez"
+      }
+    ],
+    "durationHours": 150
+  },
+  {
+    "subjectname": "Marketing",
+    "area": [
+      {
+        "name": "Administración"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Pedro Perez"
+      },
+      {
+        "name": "Ana Sulub"
+      }
+    ],
+    "durationHours": 100
+  },
+  {
+    "subjectname": "Ventas",
+    "area": [
+      {
+        "name": "Administración"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Juan Cruz"
+      },
+      {
+        "name": "Luis Ku"
+      }
+    ],
+    "durationHours": 200
+  },
+  {
+    "subjectname": "Logística",
+    "area": [
+      {
+        "name": "Administración"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Carlos Suarez"
+      },
+      {
+        "name": "María Lindz"
+      }
+    ],
+    "durationHours": 150
+  },
+  {
+    "subjectname": "Expresión oral y escrita",
+    "area": [
+      {
+        "name": "Administración"
+      },
+      {
+        "name": "Tics"
+      }
+    ],
+    "professor": [
+      {
+        "name": "Car"
+      },
+      {
+        "name": "Mari"
+      }
+    ],
+    "durationHours": 140
+  }
+]
