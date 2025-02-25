@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .main {
@@ -132,4 +133,201 @@
   padding-block: 0.5rem;
   justify-content: right;
   gap: 10px;
+}
+.info {
+  min-width: 90%;
+  width: 95%;
+  min-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.outer-square {
+  padding: 1rem;
+  border: 2px solid #ccc;
+}
+.first-row,
+.second-row,
+.third-row,
+.fourth-row {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #ccc;
+  width: 100%; /* Asegura que ocupen todo el ancho */
+}
+
+.fourth-row {
+  border-bottom: 1px solid #ccc; /* Solo la última fila */
+  margin-bottom: 1rem;
+}
+
+[class^="row"] {
+  padding-inline: 0.5rem;
+}
+.row1,
+.row3,
+.row5,
+.row7,
+.row9,
+.row11,
+.row13 {
+  width: 12.5%;
+}
+
+.row2,
+.row8,
+.row10 {
+  width: 37.5%;
+}
+
+.row4,
+.row6 {
+  width: 12.5%;
+}
+
+.row12,
+.row14 {
+  width: 87.5%;
+}
+
+.row1,
+.row7,
+.row11,
+.row13 {
+  border-left: 1px solid #ccc;
+}
+
+.row2,
+.row4,
+.row6,
+.row8,
+.row10,
+.row12,
+.row14 {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.units {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.headers {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+}
+.a1,
+.c1,
+.d1 {
+  width: 15%;
+}
+.a2,
+.c2,
+.d2 {
+  width: 30%;
+}
+
+.a3,
+.a5,
+.c3,
+.c5,
+.c6,
+.c7,
+.d3,
+.d5,
+.d6,
+.d7 {
+  width: 5%;
+}
+.a4,
+.c4,
+.d4 {
+  width: 35%;
+}
+.a6 {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.b1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.unit {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-inline: 1px solid #ccc;
+}
+.a3 {
+  overflow-wrap: anywhere;
+}
+.c4 {
+  display: flex;
+  align-self: baseline;
+  text-align: justify;
+}
+.a1 {
+  border-left: 1px solid #ccc; /* No ocupa todo el height*/
+  align-self: normal;
+  align-content: center;
+}
+
+.b1 {
+  border-top: 1px solid #ccc;
+}
+.b2 {
+  border-right: 1px solid #ccc;
+}
+.b2,
+.b3 {
+  width: 50%;
+}
+
+.a2,
+.a4,
+.a6,
+.c2,
+.c4,
+.c6 {
+  border-inline: 1px solid #ccc;
+  align-self: normal;
+  align-content: center;
+}
+
+[class^="c"] {
+  padding-inline: 1rem;
+}
+.results {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+.d3 {
+  border-inline: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.d6,
+.d7 {
+  border-bottom: 1px solid #ccc;
+}
+.d6,
+.d7 {
+  border-left: 1px solid #ccc;
+}
+.d7 {
+  border-right: 1px solid #ccc;
 }

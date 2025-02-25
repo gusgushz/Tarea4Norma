@@ -46,10 +46,12 @@ function App() {
       setFormData(JSON.parse(storedData));
     }
   }, []);
+  console.log(formData.length);
 
   useEffect(() => {
-    // Si `formData` cambia, actualizar localStorage
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(formData));
+    if (formData.length > 0) {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(formData));
+    }
   }, [formData]);
 
   const select1Options = ["Seleccione..."];
@@ -152,11 +154,11 @@ function App() {
       return;
     }
 
-    const data = { option1, option2, option3, option4, option5, option6, textArea1, textArea2, units };
+    const data: Data = { option1, option2, option3, option4, option5, option6, textArea1, textArea2, units };
 
     try {
       // Obtener los datos previos de localStorage
-      const storedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || "[]");
+      const storedData: Data[] = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || "[]");
 
       // Agregar el nuevo dato al array
       const updatedData = [...storedData, data];
@@ -329,13 +331,79 @@ function App() {
       <div className="buttons">
         <button
           onClick={() => {
-            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify({}));
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([]));
           }}
         >
           Borrar datos
         </button>
         <button onClick={() => console.log(JSON.stringify(formData, null, 2))}>Mostrar datos en log</button>
       </div>
+      {formData.length > 0 && (
+        <div className="info">
+          {formData.map((data) => (
+            <div className="outer-square">
+              <div className="first-row">
+                <div className="row1">Asignatura:</div>
+                <div className="row2">{data.option2}</div>
+                <div className="row3">Familia:</div>
+                <div className="row4">{data.option1}</div>
+                <div className="row5">Duración:</div>
+                <div className="row6">{data.option6} hrs</div>
+              </div>
+              <div className="second-row">
+                <div className="row7">Cuatrimestre:</div>
+                <div className="row8">{data.option3}</div>
+                <div className="row9">Profesor:</div>
+                <div className="row10">{data.option5}</div>
+              </div>
+              <div className="third-row">
+                <div className="row11">Competencia:</div>
+                <div className="row12">{data.textArea1}</div>
+              </div>
+              <div className="fourth-row">
+                <div className="row13">Objetivo general:</div>
+                <div className="row14">{data.textArea2}</div>
+              </div>
+              <div className="units">
+                <div className="headers">
+                  <div className="a1">*U.A.</div>
+                  <div className="a2">Competencia específica por UA</div>
+                  <div className="a3">Num Semanas</div>
+                  <div className="a4">Resultado de aprendizaje (P)</div>
+                  <div className="a5">**TI (Si/no)</div>
+                  <div className="a6">
+                    <div>Ponderacion para evaluacion</div>
+                    <div className="b1">
+                      <div className="b2">Saber (C)</div>
+                      <div className="b3">Hacer-Ser(D)</div>
+                    </div>
+                  </div>
+                </div>
+                {data.units.map((unit, index) => (
+                  <div key={index} className="unit">
+                    <div className="c1">{unit.title}</div>
+                    <div className="c2">{unit.specificCompetency}</div>
+                    <div className="c3">{unit.weeks}</div>
+                    <div className="c4">{unit.learningOutcome}</div>
+                    <div className="c5">{data.option1 == "Tics" ? "Si" : "No"}</div>
+                    <div className="c6">{unit.skill}</div>
+                    <div className="c7">{unit.knowledge}</div>
+                  </div>
+                ))}
+                <div className="results">
+                  <div className="d1"></div>
+                  <div className="d2"></div>
+                  <div className="d3">{data.units.reduce((sum, unit) => sum + Number(unit.weeks || 0), 0)}</div>
+                  <div className="d4"></div>
+                  <div className="d5"></div>
+                  <div className="d6">{data.units.reduce((sum, unit) => sum + Number(unit.skill || 0), 0)}</div>
+                  <div className="d7">{data.units.reduce((sum, unit) => sum + Number(unit.knowledge || 0), 0)}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </main>
   );
 }
